@@ -1,17 +1,18 @@
-import { useState } from 'react'
+import { useState } from 'react'//  Hooks
 import reactLogo from './assets/react.svg'
 import viteLogo from '/vite.svg'
 import './App.css'
 
 function App() {
-  let counter = 0
+  let [counter,setCounter]= useState(15);
+  //let counter = 0
   function addValue(){
     counter+=1;
-    console.log(counter);
+    setCounter(counter)
   }
   function decValue(){
     counter-=1;
-    console.log(counter);
+    setCounter(counter)
   }
 
   return (
